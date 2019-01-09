@@ -11,7 +11,7 @@
       Author: Khalel Abaquin
       Date:   1.7.19
 
-      Filename:   rb_survey.html
+      Filename:   index.html
 
    -->
 
@@ -20,6 +20,7 @@
     <title>Red Ball Survey</title>
     <link href="rb_reset.css" rel="stylesheet" />
     <link href="rb_styles.css" rel="stylesheet" />
+    <script src="rb_formsubmit.js"></script>
 
 </head>
 
@@ -53,23 +54,24 @@
             Pizza will not share your contact information with third
             parties, <em>ever</em>. </p>
         <p>Required values are marked by an asterisk (*)</p>
-        <form id="survey" action="http://www.example.com/redball/survey" method="post">
+        <form id="survey" action="http://www.example.com/redball/survey" method="POST" enctype="">
             <fieldset id="custInfo">
                 <legend>Customer Information</legend>
                 <div>
-                    <label for="name">Name</label>
+                    Name*
+                    <label for="name"></label>
                     <input name="custName" id="name" type="text" placeholder="first and last name" />
-                    <label for="street">Street Address</label>
+                    <label for="street"></label>
                     <input name="custStreet" id="street" type="text" />
-                    <label for="city">City</label>
+                    <label for="city"></label>
                     <input name="custCity" id="city" type="text" value="Ormond Beach" />
-                    <label for="state">State</label>
+                    <label for="state"></label>
                     <input name="custState" id="state" type="text" value="FL" />
-                    <label for="zip">Postal Code</label>
+                    <label for="zip"></label>
                     <input name="custZip" id="zip" type="text" placeholder="nnnnn (-nnnn)" />
-                    <label for="phone">Phone Number</label>
+                    <label for="phone"></label>
                     <input name="custPhone" id="phone" type="text" placeholder="(nnn) nnn-nnnn" />
-                    <label for="mail">E-mail</label>
+                    <label for="mail"></label>
                     <input name="custMail" id="mail" type="text" />
                 </div>
 
