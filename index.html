@@ -63,7 +63,7 @@
 
                 <div class="formRow">
                     <label for="name">Name*</label>
-                    <input name="custName" id="name" type="text" placeholder="first and last name" />
+                    <input name="custName" id="name" type="text" placeholder="first and last name" required />
                 </div>
 
                 <div class="formRow">
@@ -83,17 +83,17 @@
 
                 <div class="formRow">
                     <label for="zip">Postal Code</label>
-                    <input name="custZip" id="zip" type="text" placeholder="nnnnn (-nnnn)" />
+                    <input name="custZip" id="zip" type="text" placeholder="nnnnn (-nnnn)" pattern="^\d{5}(-\d{4})?$" />
                 </div>
 
                 <div class="formRow">
                     <label for="phone">Phone</label>
-                    <input name="custPhone" id="phone" type="text" placeholder="(nnn) nnn-nnnn" />
+                    <input name="custPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn" pattern="^\d{10}$|^(\(d{3}\)\s*)?\d{3}[\s-]?\d{4}$" />
                 </div>
 
                 <div class="formRow">
                     <label for="mail">E-mail*</label>
-                    <input name="custMail" id="mail" type="text" />
+                    <input name="custMail" id="mail" type="email" required />
                 </div>
 
                 <div class="formRow">
@@ -173,32 +173,27 @@
                         <label for="hNo">No</label>
                         <input type="radio" name="foodHot" id="hNo" value="hNo">
                     </fieldset>
+                </div>
 
 
-                    <div class="formRow">
-                        <label for="rangeBox">Rate the overall service<br />
-                            (0=poor; 10=great)</label>
-                        0
-                        <input type="range" name="serviceRate" id="rangeBox" value="5" step="1" min="1" max="10" />
-                        10
-                    </div>
+                <div class="formRow">
+                    <label for="rangeBox">Rate the overall service<br />
+                        (0=poor; 10=great)</label>
+                    0
+                    <input type="range" name="serviceRate" id="rangeBox" value="5" step="1" min="0" max="10" />
+                    10
+                </div>
 
-
-
-                    <label for="commBox">Tell us more about your experience.</label>
-                    <textarea name="custExp" id="commBox"></textarea>
-
-                    <!-- <label for="commBox">Tell us more about your experience.</label>
-                    <textarea name="custExp" id="commBox"></textarea> -->
-
+                <label for="commBox">Tell us more about your experience.</label>
+                <textarea name="custExp" id="commBox"></textarea>
             </fieldset>
 
             <div id="buttons">
                 <input type="submit" value="Submit My Survey" />
                 <input type="reset" value="Cancel" />
             </div>
-
         </form>
+
     </section>
     <footer>
         <h1>ORDER</h1>
